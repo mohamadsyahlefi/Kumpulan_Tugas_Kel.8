@@ -1,4 +1,4 @@
-Tugas Algoritma Pemrograman (Semester 1)
+Kumpulan Tugas Kelompok 8
 
 Kelas 2023D angkatan 2023
 <br>Kelompok 8 :
