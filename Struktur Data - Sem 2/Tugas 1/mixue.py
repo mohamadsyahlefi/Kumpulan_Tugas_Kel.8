@@ -60,7 +60,7 @@ class Menu:
     def find_harga(self, item):
         temp = self.head
         while temp:
-            if temp.item() == item():
+            if temp.item.lower() == item.lower():
                 return temp.harga
             temp = temp.next
         return None
@@ -78,7 +78,7 @@ miexue_menu.display_item()
 
 while True:
     print("\n1. Pesan Menu Miexue")
-    print("2. Tampikan Pesanan Saya")
+    print("2. Tampilkan Pesanan Saya")
     print("3. Bayar Pesanan")
     choice = input("Pilih opsi (1/2/3): ")
 
