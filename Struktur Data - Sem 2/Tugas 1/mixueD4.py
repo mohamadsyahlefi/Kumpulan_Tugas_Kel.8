@@ -52,25 +52,24 @@ while True:
      print(f"\n{order} sudah ditambahkan ke keranjang")
      print("-----------------------------------")
     
-# // BAGIAN DITRYA
-#     current = head
-#     while current != None:
-#         if current.NamaMenu == order:
-#             pesanan.append(current.NamaMenu)
-#             harga.append(current.Harga)
-#             Jml_Pesanan += 1
-#             totalHarga += current.Harga
-#             break
-#         current = current.next
+    current = head
+    while current != None:
+        if current.NamaMenu == order:
+             pesanan.append(current.NamaMenu)
+             harga.append(current.Harga)
+             Jml_Pesanan += 1
+             totalHarga += current.Harga
+             break
+        current = current.next
     
-#     print("\n|| Pesanan Anda ||")
-#     for i in range(Jml_Pesanan):
-#         print(pesanan[i], "Rp.", harga[i])
-#     print("\n-----------------------------------")
-#     print("(Ketik 'selesai' untuk step berikutnya) ")
-#     print("-----------------------------------")
+    print("\n|| Pesanan Anda ||")
+    for i in range(Jml_Pesanan):
+         print(pesanan[i], "Rp.", harga[i])
+    print("\n-----------------------------------")
+    print("(Ketik 'selesai' untuk step berikutnya) ")
+    print("-----------------------------------")
     
-# print("\nTotal harga pesanan Anda: Rp.", totalHarga)
-# print("-----------------------------------")
+print("\nTotal harga pesanan Anda: Rp.", totalHarga)
+print("-----------------------------------")
 
-# print("\n------Terima Kasih telah memesan di Warung Kami------\n")
+print("\n------Terima Kasih telah memesan di Warung Kami------\n")
