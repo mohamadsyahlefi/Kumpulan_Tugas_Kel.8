@@ -21,7 +21,7 @@ def addMenuItem(NamaMenu, Harga):
         tail.next = newItem
         tail = newItem
 
- def DisplayMenu():
+def DisplayMenu():
      current = head
      while current != None:
          print(current.NamaMenu, "Rp.", current.Harga)
@@ -39,12 +39,12 @@ addMenuItem("Mie Ganas", 11000)
 addMenuItem("Creamy Mango Boba", 22000)
 DisplayMenu()
 
- totalHarga = 0
- pesanan = []
- harga = []
- Jml_Pesanan = 0
+totalHarga = 0
+pesanan = []
+harga = []
+Jml_Pesanan = 0
 
- while True:
+while True:
      order = input("\nSilahkan ketik pesanan Anda: ")
     
      if order == "selesai":
