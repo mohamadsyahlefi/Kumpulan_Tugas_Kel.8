@@ -21,12 +21,11 @@ def addMenuItem(NamaMenu, Harga):
         tail.next = newItem
         tail = newItem
 
-# // BAGIAN RIVO
-# def DisplayMenu():
-#     current = head
-#     while current != None:
-#         print(current.NamaMenu, "Rp.", current.Harga)
-#         current = current.next
+ def DisplayMenu():
+     current = head
+     while current != None:
+         print(current.NamaMenu, "Rp.", current.Harga)
+         current = current.next
 
 print("\n~~~~~~~~~~~~~~~~~~~~")
 print("Selamat Datang di Warung D4 MIE")
@@ -40,19 +39,18 @@ addMenuItem("Mie Ganas", 11000)
 addMenuItem("Creamy Mango Boba", 22000)
 DisplayMenu()
 
-# // BAGIAN RIVO
-# totalHarga = 0
-# pesanan = []
-# harga = []
-# Jml_Pesanan = 0
+ totalHarga = 0
+ pesanan = []
+ harga = []
+ Jml_Pesanan = 0
 
-# while True:
-#     order = input("\nSilahkan ketik pesanan Anda: ")
+ while True:
+     order = input("\nSilahkan ketik pesanan Anda: ")
     
-#     if order == "selesai":
-#         break
-#     print(f"\n{order} sudah ditambahkan ke keranjang")
-#     print("-----------------------------------")
+     if order == "selesai":
+         break
+     print(f"\n{order} sudah ditambahkan ke keranjang")
+     print("-----------------------------------")
     
 # // BAGIAN DITRYA
 #     current = head
