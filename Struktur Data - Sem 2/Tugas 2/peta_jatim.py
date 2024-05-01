@@ -13,7 +13,7 @@ class Peta:
         return False
         
     def hapuscity(self,cityRemoved):
-     #cek apakah city yang ingin dihapus ada di list
+        #cek apakah city yang ingin dihapus ada di list
         if cityRemoved in self.cityList:
         #iterasi setiap otherCity untuk hapus cityRemoved
             for otherCity in self.cityList:
