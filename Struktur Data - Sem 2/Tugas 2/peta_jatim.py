@@ -32,6 +32,15 @@ class Peta:
             self.cityList[city1].append(city2)
             return True
         return False
+        
+    def hapusJalan(self,city1,city2):
+        if city1 in self.cityList and city2 in self.cityList:
+            #hapus city1 di list city2
+            self.cityList[city2].remove(city1)
+            #hapus city2 di list city1
+            self.cityList[city1].remove(city2)
+            return True
+        return False
 
 petaJatim = Peta()
 petaJatim.addcity("Surabaya")
@@ -39,7 +48,13 @@ petaJatim.addcity("Sidoarjo")
 petaJatim.addcity("Pasuruan")
 petaJatim.addcity("Probolinggo")
 petaJatim.addcity("Bondowoso")
-
+petaJatim.addcity("Situbondo")
+petaJatim.addcity("Banyuwangi")
+petaJatim.addcity("Jember")
+petaJatim.addcity("Lumajang")
+petaJatim.addcity("Malang")
+petaJatim.addcity("Tulungagung")
+petaJatim.addcity("Kediri")
 
 petaJatim.tambahkanJalan("Surabaya","Sidoarjo")
 petaJatim.tambahkanJalan("Pasuruan","Sidoarjo")
