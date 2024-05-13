@@ -92,6 +92,29 @@ class WeightedGraph:
                     distances[neighbor] = distance
 
         return distances
+        
+     def tsp(self):
+        # Initialize variables
+        shortest_distance = float('inf')
+        shortest_path = []
+
+        # Generate all permutations of cities
+        cities = list(self.cityList.keys())
+        for path in permutations(cities):
+            # Calculate total distance for current permutation
+            total_distance = 0
+            for i in range(len(path) - 1):
+                if path[i] in self.cityList and path[i + 1] in self.cityList[path[i]]:
+                    total_distance += self.cityList[path[i]][path[i + 1]]
+                else:
+                    total_distance = float('inf')
+                    break  # Break if path is invalid
+            # Check if current permutation is shorter than the current shortest path
+            if total_distance < shortest_distance:
+                shortest_distance = total_distance
+                shortest_path = path
+
+        return shortest_path, shortest_distance
 
 petaJatim = WeightedGraph()
 petaJatim.tambahkanKota("Surabaya")
@@ -121,3 +144,11 @@ petaJatim.tambahkanJalan("Kediri","Tulungagung", 31)
 petaJatim.tambahkanJalan("Surabaya","Kediri", 129)
 
 petaJatim.printGraph()
+
+shortest_distances = petaJatim.dijkstra("Surabaya")
+print("Shortest distances from Surabaya to other cities:")
+for city, distance in shortest_distances.items():
+    print(city, ":", distance)
+shortest_path, shortest_distance = petaJatim.tsp()
+print("Shortest TSP path:", shortest_path)
+print("Shortest TSP distance:", shortest_distance)
